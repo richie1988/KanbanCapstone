@@ -1,5 +1,7 @@
 import './style.css';
 
+import './popup.js';
+
 // Custom error-handling and logging function
 function handleError(message, error) {
   // For now, let's just log them to the browser's console
