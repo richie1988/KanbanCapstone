@@ -1,4 +1,11 @@
 import './style.css';
+import './assets/styletwo.css';
+import initializeMobileMenu from './mobile-menu.js';
+import initializeNavLinks from './nav-links.js';
+
+initializeMobileMenu();
+
+initializeNavLinks();
 // Custom error-handling and logging function
 function handleError(message, error) {
   // For now, let's just log them to the browser's console
@@ -13,7 +20,8 @@ function handleError(message, error) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const homePage = document.getElementById('home-page');
-  const appId = 'abc234'; // Replace with your actual appId
+  const appId = 'AyieX5e6xBkjrE1kOdfK'; // Replace with your actual appId
+  // https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AyieX5e6xBkjrE1kOdfK/likes/
 
   // Function to fetch data from the base API
   async function fetchData(url) {
@@ -48,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           itemElement.className = 'item';
           itemElement.id = item.id;
           itemElement.innerHTML = `
+          <div class="item">
             <img src='${item.image.medium}' alt='image'>
             <h2>${item.name}</h2>
             <p>${item.number}</p>
@@ -55,7 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <button class="like-button" data-item-id="${item.id}">Like</button>
             <button class="comment-button" data-item-id="${item.id}">Comments</button>
             <button class="reserve-button" data-item-id="${item.id}">Reserve</button>
-            <p>Likes: ${getLikeCount(likesData, item.id)}</p>
+            <p class="like-count" data-likes="0">Likes: ${getLikeCount(likesData, item.id)}</p>
+            </div>
           `;
           homePage.appendChild(itemElement);
         });
@@ -72,40 +82,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add event listeners for "Like," "Comments," and "Reserve" buttons
   homePage.addEventListener('click', async (event) => {
-    if (event.target.classList.contains('like-button')) {
+    if (event.target && event.target.classList.contains('like-button')) {
       const itemId = event.target.getAttribute('data-item-id');
+      const likeCountElement = event.target.parentElement.querySelector('.like-count');
 
-      try {
-        // Send a POST request to the Involvement API to record the like
-        const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes/`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ item_id: itemId }),
-        });
+      if (itemId && likeCountElement) {
+        const currentLikes = parseInt(likeCountElement.getAttribute('data-likes'), 10);
 
-        if (response.status === 201) {
-          // Successfully recorded the like, update the UI as needed
-          event.target.disabled = true; // Disable the "Like" button
-          event.target.innerText = 'Liked';
+        try {
+          // Send a POST request to the Involvement API to record the like
+          const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/likes/`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ item_id: itemId }),
+          });
 
-          // Update the "Likes" count in the UI
-          const likeCountElement = event.target.nextElementSibling;
-          const currentLikes = parseInt(likeCountElement.textContent.split(' ')[1], 10);
-          likeCountElement.textContent = `Likes: ${currentLikes + 1}`;
-        } else {
-          // Handle errors
-          handleError('Error recording like', response.statusText);
+          if (response.status === 201) {
+            // Successfully recorded the like, update the UI as needed
+            event.target.disabled = true; // Disable the "Like" button
+            event.target.innerText = 'Liked';
+
+            // Update the "Likes" count in the UI
+            likeCountElement.textContent = `Likes: ${currentLikes + 1}`;
+            likeCountElement.setAttribute('data-likes', currentLikes + 1);
+          } else {
+            // Handle errors
+            handleError('Error recording like', response.statusText);
+          }
+        } catch (error) {
+          // Handle errors here
+          handleError('Error recording like', error);
         }
-      } catch (error) {
-        // Handle errors here
-        handleError('Error recording like', error);
+      } else {
+        // Handle the case where the expected attributes are missing
+        handleError('Missing attributes for like button', null);
       }
-    } else if (event.target.classList.contains('comment-button')) {
+    } else if (event.target && event.target.classList.contains('comment-button')) {
       // Show the comments popup and load comments data
       // Implement this part
-    } else if (event.target.classList.contains('reserve-button')) {
+    } else if (event.target && event.target.classList.contains('reserve-button')) {
       // Show the reservations popup and load reservations data
       // Implement this part
     }
@@ -114,9 +131,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Populate the home page when the DOM is loaded
   populateHomePage();
 });
-import initializeMobileMenu from './mobile-menu.js';
-import initializeNavLinks from './nav-links.js';
-
-initializeMobileMenu();
-
-initializeNavLinks();
