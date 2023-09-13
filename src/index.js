@@ -1,4 +1,5 @@
 import './style.css';
+import './styles.css';
 
 import {
   // eslint-disable-next-line import/named
