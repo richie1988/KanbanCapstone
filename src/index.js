@@ -1,10 +1,11 @@
 import './style.css';
 
-<<<<<<< HEAD
 import {
   // eslint-disable-next-line import/named
   popA, popB, closeA, closeB,
 } from './popup.js';
+import initializeMobileMenu from './mobile-menu.js';
+import initializeNavLinks from './nav-links.js';
 
 popA();
 popB();
@@ -126,9 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Populate the home page when the DOM is loaded
   populateHomePage();
 });
-=======
-import initializeMobileMenu from './mobile-menu.js';
-import initializeNavLinks from './nav-links.js';
 
 initializeMobileMenu();
 
@@ -138,4 +136,3 @@ initializeNavLinks();
 //     return a + b;
 //   }
 //   module.exports = sum;
->>>>>>> e3a57e97e5894fb18ead87da615996cc7b335f5a
