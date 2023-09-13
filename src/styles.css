@@ -168,9 +168,6 @@
   }
 }
 
-
-
-
 /* mobile popup section */
 .popup-container1,
 .popup-container2 {
@@ -316,7 +313,6 @@ label {
   box-shadow: 0 6px #666;
   transform: translateY(4px);
 }
-
 
 /* Desktop popup section */
 @media (min-width: 768px) {
