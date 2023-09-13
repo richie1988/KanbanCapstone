@@ -1,5 +1,4 @@
 import './style.css';
-
 // Custom error-handling and logging function
 function handleError(message, error) {
   // For now, let's just log them to the browser's console
@@ -115,3 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Populate the home page when the DOM is loaded
   populateHomePage();
 });
+import initializeMobileMenu from './mobile-menu.js';
+import initializeNavLinks from './nav-links.js';
+
+initializeMobileMenu();
+
+initializeNavLinks();
