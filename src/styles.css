@@ -1,55 +1,175 @@
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+* {
   padding: 0;
-  background-color: #f0f0f0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-main {
-  padding: 20px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
-.item {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-
-.item button {
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#home-page {
-  background-color: brown;
-  width: 100%;
-  height: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  #home-page {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 30px;
-  }
+::placeholder {
+  font-style: italic;
+  font-size: 1em;
 }
 
 .d-none {
   display: none;
 }
+
+.desktop-menu,
+.desktop {
+  display: none;
+}
+
+.navbar {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #fff;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  box-shadow: 3px 5px 2px rgb(129, 126, 126);
+}
+
+.my-logo {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #6070ff;
+  text-decoration: none;
+  border: 1px solid;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px auto;
+  margin-right: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #6070ff;
+}
+
+/* Mobile Menu */
+@media only screen and (max-width: 768px) {
+  .mobile-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+    background-color: white;
+  }
+
+  .mobile-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: white;
+  }
+
+  .desktop-menu {
+    position: fixed;
+    left: -100%;
+    display: block;
+    top: 0;
+    gap: 0;
+    width: 100%;
+    transition: 0.3s;
+    margin-left: 0;
+    padding-top: 50px;
+  }
+
+  .desktop-menu.active {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    background-color: #999cb3c2;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    margin-top: -2px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .nav-item {
+    padding-bottom: 15px;
+    margin: 35px 20px;
+    list-style-type: none;
+    text-align: center;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding: 5px 110px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+
+  .mobile-menu,
+  .mobile,
+  .shape {
+    display: none;
+  }
+
+  .desktop-menu,
+  .desktop {
+    display: block;
+  }
+
+  .desktop-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .desktop-menu .nav-item {
+    display: inline-block;
+  }
+
+  .desktop-menu .nav-item .nav-link {
+    display: block;
+    color: #344563;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .my-logo:hover {
+    font-size: 2em;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 2px 3px 3px #172b4d;
+  }
+
+  .desktop-menu .nav-item .nav-link:hover {
+    font-size: 1.4em;
+    transition: all 0.5s ease-in-out;
+    text-decoration: underline #396df2;
+  }
+}
+
+
+
 
 /* mobile popup section */
 .popup-container1,
@@ -121,11 +241,21 @@ footer {
   font-size: 20px;
 }
 
-.comment-lists,
+.comments-lists,
 .reservation-lists {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.comment-lists-items,
+.reservation-lists-items,
+.display-reservations,
+.display-comment {
+  text-align: center;
+  padding: 0 10px;
+  font-size: 0.8em;
+  background-color: red;
 }
 
 .add-comment,
@@ -135,20 +265,27 @@ footer {
   font-size: 20px;
 }
 
-#comment-input {
-  margin: 15px 0;
-  padding: 5px;
+label {
+  display: block;
 }
 
-#reservation-input {
+.comment-input {
+  margin: 15px 0;
+  padding: 6px;
+  width: 230px;
+}
+
+.reservation-input {
   margin: 5px 0;
   padding: 5px;
+  width: 230px;
 }
 
-#reservation-input-date {
-  margin: 15px 0;
+.reservation-input-dateA,
+.reservation-input-dateB {
+  margin: 15px 0 0;
   padding: 5px;
-  display: block;
+  width: 230px;
 }
 
 .comment-bnt,
@@ -165,6 +302,7 @@ footer {
   border: none;
   border-radius: 15px;
   box-shadow: 0 6px #999;
+  margin-top: 8px;
 }
 
 .comment-bnt:hover,
@@ -178,6 +316,7 @@ footer {
   box-shadow: 0 6px #666;
   transform: translateY(4px);
 }
+
 
 /* Desktop popup section */
 @media (min-width: 768px) {
@@ -236,22 +375,32 @@ footer {
   .reservation-lists-counts,
   .reservation-lists {
     text-align: center;
-    margin: 10px auto;
+    margin: 5px auto 0;
     font-size: 1.4em;
-    padding: 10px;
+    padding: 0 10px;
   }
 
-  .comment-lists,
+  .comments-lists,
   .reservation-lists {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
 
+  .comment-lists-items,
+  .reservation-lists-items,
+  .display-reservations,
+  .display-comment {
+    text-align: center;
+    padding: 3px 10px;
+    font-size: 1em;
+    background-color: red;
+  }
+
   .add-comment,
   .add-reservation {
     text-align: center;
-    margin: 40px auto;
+    margin: 20px auto;
     font-size: 1.6em;
   }
 
@@ -261,10 +410,6 @@ footer {
     justify-content: center;
     text-align-last: center;
     text-align: center;
-  }
-
-  label {
-    display: block;
   }
 
   #comment-input {
@@ -280,11 +425,12 @@ footer {
 
   #reservation-input {
     margin: 15px 0;
-    padding: 15px;
+    padding: 10px;
     width: 40%;
   }
 
-  #reservation-input-date {
+  #reservation-input-dateA,
+  #reservation-input-dateB {
     margin: 15px auto;
     padding: 5px;
     width: 25%;
