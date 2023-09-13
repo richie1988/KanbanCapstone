@@ -8,6 +8,54 @@ head body {
 
 main {
   padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.item {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.item button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#home-page {
+  background-color: brown;
+  width: 100%;
+  height: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.d-none {
+  display: none;
 }
 
 footer {
@@ -105,10 +153,19 @@ footer {
     width: 100%;
     height: auto;
   }
-
   .popup-img-description {
     padding: 0 15px 15px 15px;
     text-align: center;
+  #home-page {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+  }
+
+  .mobile-menu,
+  .mobile,
+  .shape {
+    display: none;
   }
 
   .popup-descriptive-info {
