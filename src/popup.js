@@ -7,7 +7,7 @@ const popuPontainer2 = document.querySelector('.popup-container2');
 const closePopupB = document.querySelector('.close-popupB');
 const closePopupA = document.querySelector('.close-popupA');
 
-export default function popA() {
+export function popA() {
   btn1.addEventListener('click', () => {
     popuPontainer1.classList.remove('d-none');
   });
@@ -20,7 +20,6 @@ export function popB() {
 }
 
 // close popup
-
 export function closeA() {
   closePopupA.addEventListener('click', () => {
     popuPontainer1.classList.add('d-none');

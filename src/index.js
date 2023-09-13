@@ -1,5 +1,15 @@
 import './style.css';
 
+import {
+  // eslint-disable-next-line import/named
+  popA, popB, closeA, closeB,
+} from './popup.js';
+
+popA();
+popB();
+closeA();
+closeB();
+
 // Custom error-handling and logging function
 function handleError(message, error) {
   // For now, let's just log them to the browser's console
