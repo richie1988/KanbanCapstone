@@ -58,25 +58,27 @@
                                 </div>
                             </section>
                             
-                            <p class="comment-lists-counts">Comments (3)</p>
+                            <p class="comment-lists-counts">Comments: (<span id="comment-counts">0</span>)</p>
             
-                            <ul class="comment-lists">
-                                <li class="comments-lists-items">jan</li>
-                                <li class="comments-lists-items">feb</li>
-                            </ul>
             
+                            <ul id="comment-lists" class="comments-lists"></ul>
+                            
                             <h3 class="add-comment">Add a comment</h3>
             
-                            <form action="" id="form">
+            
+                            <div id="form">
                                 <label for="comment-input">
                                     <input type="text" name="comment-input" placeholder="Your name" id="comment-input">
                                 </label>
+            
                                 <label for="message">
                                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
                                 </label>
-                                <button class="comment-bnt">Comment</button>
-                            </form>
+                                <button id="add-comment" class="comment-bnt">Comment</button>
+                            </div>
+                            <p class="error-comment"></p>
                         </div>
+            
                     </div>
                 </section>
             
@@ -106,28 +108,29 @@
                                 </div>
                             </section>
             
-                            <p class="reservation-lists-counts">Reservations (2)</p>
+                            <p class="reservation-lists-counts">Reservations: (<span id="counts">0</span>)</p>
             
-                            <ul class="reservation-lists">
-                                <li class="reservation-lists-items">jan</li>
-                                <li class="reservation-lists-items">feb</li>
-                            </ul>
-            
+                            <ul id="lists" class="reservation-lists"></ul>
+                            
                             <h3 class="add-reservation">Add a reservation</h3>
             
-                            <form action="" id="form">
+                            <div id="form">
+                                
                                 <label for="reservation-input">
-                                    <input type="text" name="reservation-input" placeholder="Your name" id="reservation-input">
+                                    <input type="text" id="reservation-input" placeholder="Your Name">
                                 </label>
-                                <label for="reservation-input">
-                                    <input type="date" name="reservation-input-date" placeholder="Your name" id="reservation-input-date">
+                                
+                                <label for="reservation-input-dateA">
+                                    <input type="text" id="reservation-input-dateA" name="custom-date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="start date dd/mm/yyyy">
                                 </label>
-                                <label for="reservation-input">
-                                    <input type="date" name="reservation-input-date" placeholder="Your name" id="reservation-input-date">
+            
+                                <label for="reservation-input-dateB">
+                                    <input type="text" id="reservation-input-dateB" name="custom-date" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="end date dd/mm/yyyy">
                                 </label>
-                                <button class="reservation-bnt">Reserve</button>
-                            </form>    
-                   
+            
+                                <button id="add" class="reservation-bnt">Reserve</button>
+                            </div>    
+                            <p class="error-reservation"></p>
                         </div>
                     </div>
                 </section>
