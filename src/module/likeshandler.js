@@ -1,4 +1,4 @@
-import { likesAPI} from './commenthandler.js';
+import { likesAPI } from './commenthandler.js';
 
 const addLike = async (index) => {
   try {

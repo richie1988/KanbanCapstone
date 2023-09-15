@@ -42,7 +42,6 @@ so that other developer's can find them or see what the have built.
 .ES6
 .Webpack
 .module
-
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
@@ -84,7 +83,7 @@ any text editor installed inside
 
 Clone this repository to your desired folder:
 run:
-git clone git@github.com:richie1988/mobile-portfoliofinish.git
+git clone (https://github.com/richie1988/KanbanCapstone)
 
 ### Install
 
