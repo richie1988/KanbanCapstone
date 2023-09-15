@@ -19,7 +19,6 @@ Movies
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
@@ -90,30 +89,38 @@ desktop-computer/laptop
 any text editor installed inside
 
 ### Setup
-
+Clone this repository to your desired folder:
+```sh
+cd my-folder
 Clone this repository to your desired folder:
 run:
 git clone (https://github.com/richie1988/KanbanCapstone)
 
 ### Install
-
-Install this project with:
-
-github
-git
-cmd
+Install the prerequisites this project using:
+```sh
+cd Restaurant-System
+```
+```bash
+npm start
+```
 
 ### Usage
-
-To run the project, execute the following command:
-
-npx git install
-git clone
+To run the project:
+```bash
+npm install
+```
 ### Run tests
-
-To run tests, run the following command:
-npx stylelint "\*_/_.{css,scss}"
-
+To run tests after setting up the linters, run the following command:
+```sh
+npx hint .
+```
+```sh
+npx stylelint "**/*.{css,scss}"
+```
+```bash
+npx eslint .
+```
 ### Deployment
 
 You can deploy this project using:
