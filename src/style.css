@@ -416,9 +416,9 @@ form {
     position: fixed;
     z-index: 1;
     opacity: 0;
-    width: 75%;
+    width: 60%;
     top: 0;
-    left: 12.5%;
+    left: 50%;
     right: 0;
     bottom: 0;
     pointer-events: none;
@@ -441,7 +441,7 @@ form {
     position: fixed;
     padding: 3%;
     top: 50%;
-    left: 30%;
+    left: 40%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     z-index: 1;
@@ -464,6 +464,11 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .modal img {
+    width: 600px;
+    height: 100%;
   }
 
   .item-name {

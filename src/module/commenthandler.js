@@ -1,4 +1,4 @@
-const movieAPI = 'https://api.tvmaze.com/shows/1/episodes?specials';
+const movieAPI = 'https://api.tvmaze.com/shows/1/episodes?specials=1';
 const commentAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Bz8sde1lr8WmKzCrHh97/comments';
 const likesAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/hHoxKTRKINp4PN8g78ys/likes';
 
@@ -49,7 +49,6 @@ const addComment = async (id, userName, comment) => {
     return error;
   }
 };
-
 const commentsCount = () => {
   const comments = document.querySelectorAll('.comments');
   return comments.length;

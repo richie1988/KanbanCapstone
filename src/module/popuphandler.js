@@ -25,7 +25,7 @@ function createModalTemplate(item) {
       <form>
         <input type="text" name="username" class="username-input" placeholder="Your name" required/>
         <textarea name="comment" class="comment-input" rows="6" maxlength="50" placeholder="Enter your comment here..." required></textarea>
-        <button type="submit" class="create-comment" data-episode-id="${item.id}">Comment</button>
+        <button type="submit" class="create-comment" data-episode-id="${item.original}">Comment</button>
       </form>
     </div>
   `;
@@ -61,15 +61,17 @@ const episodeButtonClickListener = async (episodeId) => {
 
     const commentButtons = document.querySelectorAll('.create-comment');
     commentButtons.forEach((button) => {
-      button.addEventListener('click', async (event) => {
+      button.addEventListener('click', (event) => {
         event.preventDefault();
-        const modal = event.target.closest('.modal');
-        const username = modal.querySelector('.username-input').value;
-        const comment = modal.querySelector('.comment-input').value;
+        const username = modalElement.querySelector('.username-input').value;
+        const comment = modalElement.querySelector('.comment-input').value;
         const episodeId = event.target.getAttribute('data-episode-id');
-        await addComment(episodeId, username, comment);
-        fetchComments(episodeId);
-        modal.querySelector('form').reset();
+        addComment(episodeId, username, comment).then((response) => {
+          if (response.ok) {
+            fetchComments(episodeId);
+            modalElement.querySelector('form').reset();
+          }
+        });
       });
     });
 

@@ -1,6 +1,6 @@
 import buttonEventListener from './popuphandler.js';
-import { addLike } from './likeshandler.js';
 import { movieAPI } from './commenthandler.js';
+import { handleLikeClick } from './likescounter.js';
 
 const homeContent = async () => {
   const contentContainer = document.getElementById('content-container');
@@ -17,9 +17,15 @@ const homeContent = async () => {
     list.appendChild(imgContainer);
 
     const img = document.createElement('img');
-    img.src = episode.image.medium;
     img.alt = 'episode banner';
     img.classList.add('image');
+
+    if (episode.image && episode.image.medium) {
+      img.src = episode.image.medium;
+    } else {
+      img.src = 'fallback-image-url.jpg'; // Provide a fallback image URL
+    }
+
     imgContainer.appendChild(img);
 
     const container = document.createElement('div');
@@ -54,33 +60,17 @@ const homeContent = async () => {
 
     contentContainer.appendChild(list);
   });
-  const listItems = contentContainer.querySelectorAll('li');
-  const menuList = document.querySelectorAll('.nav-link');
+
   const likeEle = document.querySelectorAll('.like');
   const openPopButtons = document.querySelectorAll('.comment-button');
-  const listCounter = document.createElement('span');
-  listCounter.textContent = `(${listItems.length})`;
-  menuList[0].appendChild(listCounter);
+
+  likeEle.forEach((button) => {
+    button.addEventListener('click', handleLikeClick);
+  });
 
   openPopButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
       buttonEventListener(e.target.parentElement.id);
-    });
-  });
-
-  likeEle.forEach((button) => {
-    button.addEventListener('click', async (e) => {
-      const likeID = e.target.id;
-      const likeCount = e.target.nextElementSibling;
-      if (e.target.classList.contains('like')) {
-        const res = await addLike(likeID);
-        const value = parseInt(likeCount.textContent, 10);
-        e.target.classList.add('like2');
-        e.target.classList.remove('like');
-        if (res.status === 201) {
-          likeCount.innerHTML = value + 1;
-        }
-      }
     });
   });
 };

@@ -161,7 +161,7 @@ I would like Thank Microverse Team and my Collabaration partners whom they have 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/features/issues).
+Feel free to check the [issues page](https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
