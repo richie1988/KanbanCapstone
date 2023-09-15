@@ -62,7 +62,6 @@ so that other developer's can find them or see what the have built.
 
 <!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -97,7 +96,6 @@ To run the project, execute the following command:
 
 npx git install
 git clone
-
 ### Run tests
 
 To run tests, run the following command:
@@ -119,7 +117,6 @@ I would like Thank Microverse Team and my Collabaration partners whom they have 
 
 👤 **Author**
  **Richard Sikaonga**
-
 - GitHub: [@githubhandle](https://github.com/richie1988)
 - Twitter: [@twitterhandle](@Richiesikaonga)
 - LinkedIn: [LinkedIn](in/richard-sikaonga-039940275)
