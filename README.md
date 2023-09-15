@@ -1,7 +1,7 @@
 <a name="Richard Sikaonga"></a>
 
 <div class="MY LOGO">
-#RIYI MOVIES
+#RIch and YayaIsmail Movies
 <a> <img src="../src/assets/RIYI-LOGO.png" style='border-radius: 50%;, align-centter'></a>
 </div>
 # 📗 Table of Contents
@@ -37,30 +37,45 @@ so that other developer's can find them or see what the have built.
 
 .CSS
 .HTML
-.Javascript
+.JavaScript
 .API
 .ES6
 .Webpack
 .module
+
 ### Tech Stack <a name="tech-stack"></a>
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://js.org/">JAVASCRIPT</a></li>
+  </ul>
+</details>
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://css.org/">style.css</a></li>
+    <li><a href="https://css.org/">CSS</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://html.com/">Index.html</a></li>
+    <li><a href="https://html.com/">HTML</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
+- **[The project was built using ES6]**
+- **[Modules were imported/exported for the JavaScript]**
+- **[Webpack bundling was used]**
+- **[TVMaze and Invovlement APIs were consumed]**
+- **[GitHub Projects was used to track progress throughout the app building]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+- [Presentation Link](coming soon)
 
 <!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
 
@@ -115,6 +130,12 @@ You can deploy this project using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Deployment
+
+You can deploy this project using:
+
+-[Deployment Link](https://richie1988.github.io/KanbanCapstone/dist)
+
 ## 👥 Authors <a name="Richard Sikaonga"></a>
 
 I would like Thank Microverse Team and my Collabaration partners whom they have paired me for the entire project the contributed there knowledge and ideas towards the Contact form part for this projects.
@@ -136,6 +157,10 @@ I would like Thank Microverse Team and my Collabaration partners whom they have 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- **[Consumption of more APIs]**
+- **[More dynamic styling]**
+- **[Improved UX interaction]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -148,7 +173,9 @@ Feel free to check the [issues page](https://docs.github.com/en/issues).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project please feel free to reach me on social media platform and contact me ready to face new world challenges and takle them kindly show your support by reaching me and giving me the opportunity i need.
+Give a like if you like this project and kindly follow us using our social media handles
+<!-- 
+If you like this project please feel free to reach me on social media platform and contact me ready to face new world challenges and takle them kindly show your support by reaching me and giving me the opportunity i need. -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
