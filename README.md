@@ -1,8 +1,7 @@
 <a name="Richard Sikaonga"></a>
 
-<div class="MY LOGO">
-#RIch and YayaIsmail Movies
-<a> <img src="../src/assets/RIYI-LOGO.png" style='border-radius: 50%;, align-centter'></a>
+<div>
+<img src="src/assets/RIYI-LOGO.png"/>
 </div>
 # 📗 Table of Contents
 
@@ -35,14 +34,12 @@ so that other developer's can find them or see what the have built.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-.CSS
-.HTML
-.JavaScript
-.API
-.ES6
-.Webpack
-.module
-
+    - [HTML](#.HTML)
+    - [CSS](#.CSS)
+    - [Javascript](#.Javascript)
+    - [Webpack](#.Webpack)
+    - [ES6](#.ES6)
+    - [API](#.API)
 ### Tech Stack <a name="tech-stack"></a>
 <details>
   <summary>Client</summary>
