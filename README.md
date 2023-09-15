@@ -34,12 +34,12 @@ so that other developer's can find them or see what the have built.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-    - [HTML](#.HTML)
-    - [CSS](#.CSS)
-    - [Javascript](#.Javascript)
-    - [Webpack](#.Webpack)
-    - [ES6](#.ES6)
-    - [API](#.API)
+    - [HTML](#HTML)
+    - [CSS](#CSS)
+    - [Javascript](#Javascript)
+    - [Webpack](#Webpack)
+    - [ES6](#ES6)
+    - [API](#API)
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
