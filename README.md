@@ -1,8 +1,13 @@
+Movies
+
 <a name="Richard Sikaonga"></a>
 
-<div>
-<img src="src/assets/RIYI-LOGO.png"/>
+<div  align="center">
+<img src="src/assets/RIYI-LOGO.png" alt="logo" width="160" border-radius=" 40px" height="auto"/>
+<br/>
+  <h3><b>Best Tv Shows and movies</b></h3>
 </div>
+
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
@@ -10,6 +15,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [📹 Video Presentation ](#-video-presentation-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -23,6 +29,7 @@
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
+<!-- PROJECT DESCRIPTION -->
 
 # 📖 [RIYIMOVIE CHANNEL] <a name="about-project"></a>
 
@@ -34,47 +41,39 @@ so that other developer's can find them or see what the have built.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-    - [HTML](#HTML)
-    - [CSS](#CSS)
-    - [Javascript](#Javascript)
-    - [Webpack](#Webpack)
-    - [ES6](#ES6)
-    - [API](#API)
+- [x] HTML
+- [x] CSS
+- [x] ES6
+- [x] Webpack
+- [x] External APIs
 ### Tech Stack <a name="tech-stack"></a>
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://js.org/">JAVASCRIPT</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://www.javascript.com/">ES6</a></li>
+    <li><a href="https://webpack.js.org/">Webpack</a></li>
+    <li><a href="https://www.themealdb.com/api.php">Tvmaz API</a></li>
   </ul>
 </details>
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://css.org/">CSS</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://html.com/">HTML</a></li>
-  </ul>
-</details>
-
 ### Key Features <a name="key-features"></a>
 
-- **[The project was built using ES6]**
-- **[Modules were imported/exported for the JavaScript]**
-- **[Webpack bundling was used]**
-- **[TVMaze and Invovlement APIs were consumed]**
-- **[GitHub Projects was used to track progress throughout the app building]**
+- **[Display all movies from the Tvmaz API.]**
+- **[Show the number of episodes in the website.]**
+- **[Like a movie.]**
+- **[Show the number of likes on a espisode.]**
+- **[Leave user comments on a movie.]**
+- - **[Display the number of Tvshows]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- [Presentation Link](coming soon)
-
 <!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
+
+## 📹 Video Presentation <a name="video-presentation"></a>
+- Coming Soon
+- [Video Presentation](https://www.loom.com/share/8489447b36fb4be0ae7e317ae1e9e78e?sid=bed2b077-e524-453d-b1cf-44b2b071142f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,12 +124,6 @@ You can deploy this project using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Deployment
-
-You can deploy this project using:
-
--[Deployment Link](https://richie1988.github.io/KanbanCapstone/dist)
-
 ## 👥 Authors <a name="Richard Sikaonga"></a>
 
 I would like Thank Microverse Team and my Collabaration partners whom they have paired me for the entire project the contributed there knowledge and ideas towards the Contact form part for this projects.
@@ -161,15 +154,14 @@ I would like Thank Microverse Team and my Collabaration partners whom they have 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://docs.github.com/en/issues).
+Feel free to check the [issues page](https://github.com/features/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
 Give a like if you like this project and kindly follow us using our social media handles
-<!-- 
-If you like this project please feel free to reach me on social media platform and contact me ready to face new world challenges and takle them kindly show your support by reaching me and giving me the opportunity i need. -->
+If you like this project please feel free to reach me on social media platform and contact me ready to face new world challenges and takle them kindly show your support by reaching me and giving me the opportunity i need.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
