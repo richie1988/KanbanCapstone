@@ -1,32 +1,37 @@
 import buttonEventListener from './popuphandler.js';
 import { movieAPI } from './commenthandler.js';
-import { handleLikeClick } from './likescounter.js';
+import { incrementTotalLength } from './movieCounter.js';
+import setupLikeButtonListeners from './likeButtonHandler.js';
 
 const homeContent = async () => {
   const contentContainer = document.getElementById('content-container');
-
   const response = await fetch(movieAPI);
   const episodeData = await response.json();
 
   episodeData.forEach((episode) => {
     const list = document.createElement('li');
     list.id = episode.id;
-
     const imgContainer = document.createElement('div');
     imgContainer.classList.add('img-container');
     list.appendChild(imgContainer);
 
-    const img = document.createElement('img');
-    img.alt = 'episode banner';
-    img.classList.add('image');
-
     if (episode.image && episode.image.medium) {
+      const img = document.createElement('img');
       img.src = episode.image.medium;
-    } else {
-      img.src = 'fallback-image-url.jpg'; // Provide a fallback image URL
-    }
+      img.alt = 'episode banner';
+      img.classList.add('image');
+      imgContainer.appendChild(img);
 
-    imgContainer.appendChild(img);
+      img.onload = function handleImageLoad() {
+        incrementTotalLength(img.width);
+      };
+    } else {
+      const img = document.createElement('img');
+      img.src = 'path_to_default_image.jpg';
+      img.alt = 'default episode banner';
+      img.classList.add('image');
+      imgContainer.appendChild(img);
+    }
 
     const container = document.createElement('div');
     container.classList.add('title-like-container');
@@ -61,18 +66,20 @@ const homeContent = async () => {
     contentContainer.appendChild(list);
   });
 
-  const likeEle = document.querySelectorAll('.like');
+  const listItems = contentContainer.querySelectorAll('li');
+  const menuList = document.querySelectorAll('.nav-link');
   const openPopButtons = document.querySelectorAll('.comment-button');
-
-  likeEle.forEach((button) => {
-    button.addEventListener('click', handleLikeClick);
-  });
+  const listCounter = document.createElement('span');
+  listCounter.textContent = `(${listItems.length})`;
+  menuList[0].appendChild(listCounter);
 
   openPopButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
       buttonEventListener(e.target.parentElement.id);
     });
   });
+
+  setupLikeButtonListeners();
 };
 
 export default homeContent;
