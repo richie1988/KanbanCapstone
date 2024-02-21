@@ -68,7 +68,7 @@ so that other developer's can find them or see what the have built.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
+## 🚀 Live Demo <a name="live-demo">[Here](https://riyamovies.onrender.com/)</a>
 
 ## 📹 Video Presentation <a name="video-presentation"></a>
 - Coming Soon
