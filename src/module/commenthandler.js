@@ -1,4 +1,4 @@
-const movieAPI = 'https://api.tvmaze.com/shows/1/episodes?specials=1';
+const movieAPI = 'https://api.tvmaze.com/shows';
 const commentAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Bz8sde1lr8WmKzCrHh97/comments';
 const likesAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/hHoxKTRKINp4PN8g78ys/likes';
 
